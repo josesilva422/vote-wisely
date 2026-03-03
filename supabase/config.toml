@@ -1,1 +1,4 @@
 project_id = "gztcbtfnngvqfthcmlvp"
+
+[functions.send-vote-email]
+verify_jwt = false

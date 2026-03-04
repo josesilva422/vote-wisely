@@ -150,7 +150,7 @@ const Index = () => {
             value={voterName}
             onChange={(e) => setVoterName(e.target.value)}
             maxLength={100}
-            className="bg-white/10 border-white/15 text-white placeholder:text-white/30 focus-visible:ring-purple-500/50 focus-visible:border-purple-400/50 backdrop-blur-sm rounded-xl h-12"
+            className="bg-white/10 border-white/15 text-white placeholder:text-white/30 focus-visible:ring-sky-500/50 focus-visible:border-sky-400/50 backdrop-blur-sm rounded-xl h-12"
           />
         </div>
 

@@ -3,8 +3,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { CheckCircle2, Vote, Loader2 } from "lucide-react";
+import { CheckCircle2, Vote, Loader2, ZoomIn, X } from "lucide-react";
 import { getSessionId, hasVoted, markAsVoted } from "@/lib/session";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -14,6 +15,7 @@ const Index = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [voterName, setVoterName] = useState("");
   const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
+  const [previewImage, setPreviewImage] = useState<Image | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [voted, setVoted] = useState(hasVoted());
@@ -149,13 +151,24 @@ const Index = () => {
                 }`}
                 onClick={() => setSelectedImageId(image.id)}
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden relative group">
                   <img
                     src={image.image_url}
                     alt={image.title}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
+                  <button
+                    type="button"
+                    className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setPreviewImage(image);
+                    }}
+                    aria-label="Ampliar imagem"
+                  >
+                    <ZoomIn className="h-4 w-4 text-foreground" />
+                  </button>
                 </div>
                 <div className="p-3 text-center">
                   <p className="font-medium text-sm text-foreground">{image.title}</p>
@@ -191,6 +204,22 @@ const Index = () => {
             </Button>
           </div>
         )}
+
+        {/* Fullscreen Image Preview */}
+        <Dialog open={!!previewImage} onOpenChange={() => setPreviewImage(null)}>
+          <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 sm:p-4">
+            {previewImage && (
+              <div className="flex flex-col items-center gap-3">
+                <img
+                  src={previewImage.image_url}
+                  alt={previewImage.title}
+                  className="max-w-full max-h-[75vh] object-contain rounded-md"
+                />
+                <p className="text-lg font-semibold text-foreground">{previewImage.title}</p>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </main>
     </div>
   );

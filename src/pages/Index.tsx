@@ -151,13 +151,24 @@ const Index = () => {
                 }`}
                 onClick={() => setSelectedImageId(image.id)}
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden relative group">
                   <img
                     src={image.image_url}
                     alt={image.title}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
+                  <button
+                    type="button"
+                    className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setPreviewImage(image);
+                    }}
+                    aria-label="Ampliar imagem"
+                  >
+                    <ZoomIn className="h-4 w-4 text-foreground" />
+                  </button>
                 </div>
                 <div className="p-3 text-center">
                   <p className="font-medium text-sm text-foreground">{image.title}</p>

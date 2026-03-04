@@ -96,8 +96,8 @@ const Index = () => {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/15 rounded-full blur-[100px]" />
 
         <Card className="max-w-md w-full p-10 text-center space-y-5 bg-white/10 backdrop-blur-xl border-white/10 rounded-3xl shadow-2xl relative z-10">
-          <div className="mx-auto w-20 h-20 rounded-full bg-emerald-500/20 flex items-center justify-center">
-            <CheckCircle2 className="h-12 w-12 text-emerald-400" />
+          <div className="mx-auto w-20 h-20 rounded-full bg-sky-500/20 flex items-center justify-center">
+            <CheckCircle2 className="h-12 w-12 text-sky-400" />
           </div>
           <h1 className="text-3xl font-bold text-white">Obrigado pelo seu voto!</h1>
           <p className="text-white/60 text-lg">

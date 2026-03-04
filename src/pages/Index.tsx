@@ -115,21 +115,24 @@ const Index = () => {
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Header */}
-      <header className="relative py-12 px-4">
+      <header className="relative py-10 md:py-14 px-4">
         <div className="absolute inset-0 bg-white/[0.03] backdrop-blur-sm" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          {/* Logo */}
-          <div className="mb-6">
-            <img
-              src="/conecta-logo.png"
-              alt="Conecta"
-              className="mx-auto h-20 w-auto drop-shadow-[0_0_25px_rgba(168,85,247,0.4)]"
-            />
+        <div className="max-w-4xl mx-auto relative z-10 flex flex-col items-center gap-4">
+          {/* Logo + Title row */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5">
+            {/* Logo with glow background */}
+            <div className="bg-white/10 backdrop-blur-md rounded-full p-3 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+              <img
+                src="/conecta-logo.png"
+                alt="Conecta"
+                className="w-16 sm:w-20 md:w-24 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] brightness-110"
+              />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight text-center sm:text-left">
+              Votação Online
+            </h1>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
-            Votação Online
-          </h1>
-          <p className="text-white/50 text-lg max-w-md mx-auto">
+          <p className="text-white/50 text-lg max-w-md text-center">
             Escolha sua imagem favorita e registre seu voto
           </p>
         </div>

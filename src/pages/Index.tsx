@@ -3,8 +3,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { CheckCircle2, Vote, Loader2 } from "lucide-react";
+import { CheckCircle2, Vote, Loader2, ZoomIn, X } from "lucide-react";
 import { getSessionId, hasVoted, markAsVoted } from "@/lib/session";
 import type { Tables } from "@/integrations/supabase/types";
 

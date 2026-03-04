@@ -15,6 +15,7 @@ const Index = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [voterName, setVoterName] = useState("");
   const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
+  const [previewImage, setPreviewImage] = useState<Image | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [voted, setVoted] = useState(hasVoted());

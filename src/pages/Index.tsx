@@ -90,14 +90,14 @@ const Index = () => {
 
   if (voted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1a1145] via-[#2d1b69] to-[#0f172a] px-4 relative overflow-hidden">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#00223B] via-[#003355] to-[#0a1628] px-4 relative overflow-hidden">
         {/* Decorative glows */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/15 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-[128px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/15 rounded-full blur-[100px]" />
 
         <Card className="max-w-md w-full p-10 text-center space-y-5 bg-white/10 backdrop-blur-xl border-white/10 rounded-3xl shadow-2xl relative z-10">
-          <div className="mx-auto w-20 h-20 rounded-full bg-emerald-500/20 flex items-center justify-center">
-            <CheckCircle2 className="h-12 w-12 text-emerald-400" />
+          <div className="mx-auto w-20 h-20 rounded-full bg-sky-500/20 flex items-center justify-center">
+            <CheckCircle2 className="h-12 w-12 text-sky-400" />
           </div>
           <h1 className="text-3xl font-bold text-white">Obrigado pelo seu voto!</h1>
           <p className="text-white/60 text-lg">
@@ -109,10 +109,10 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1145] via-[#2d1b69] to-[#0f172a] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#00223B] via-[#003355] to-[#0a1628] relative overflow-hidden">
       {/* Decorative background glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-500/15 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-sky-500/15 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Header */}
       <header className="relative py-10 md:py-14 px-4">
@@ -150,14 +150,14 @@ const Index = () => {
             value={voterName}
             onChange={(e) => setVoterName(e.target.value)}
             maxLength={100}
-            className="bg-white/10 border-white/15 text-white placeholder:text-white/30 focus-visible:ring-purple-500/50 focus-visible:border-purple-400/50 backdrop-blur-sm rounded-xl h-12"
+            className="bg-white/10 border-white/15 text-white placeholder:text-white/30 focus-visible:ring-sky-500/50 focus-visible:border-sky-400/50 backdrop-blur-sm rounded-xl h-12"
           />
         </div>
 
         {/* Gallery */}
         {loading ? (
           <div className="flex justify-center py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-purple-400" />
+            <Loader2 className="h-8 w-8 animate-spin text-sky-400" />
           </div>
         ) : images.length === 0 ? (
           <p className="text-center text-white/40 py-12">
@@ -170,7 +170,7 @@ const Index = () => {
                 key={image.id}
                 className={`overflow-hidden cursor-pointer transition-all duration-300 bg-white/5 border-white/10 rounded-2xl backdrop-blur-sm group ${
                   selectedImageId === image.id
-                    ? "ring-2 ring-purple-400 shadow-[0_0_30px_rgba(168,85,247,0.3)] scale-[1.03]"
+                    ? "ring-2 ring-sky-400 shadow-[0_0_30px_rgba(56,189,248,0.3)] scale-[1.03]"
                     : "hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:border-white/20"
                 }`}
                 onClick={() => setSelectedImageId(image.id)}
@@ -199,7 +199,7 @@ const Index = () => {
                 <div className="p-3 text-center">
                   <p className="font-semibold text-sm text-white/90">{image.title}</p>
                   {selectedImageId === image.id && (
-                    <span className="inline-flex items-center gap-1 mt-1 text-xs text-purple-300 font-semibold">
+                    <span className="inline-flex items-center gap-1 mt-1 text-xs text-sky-300 font-semibold">
                       <CheckCircle2 className="h-3.5 w-3.5" /> Selecionada
                     </span>
                   )}
@@ -216,7 +216,7 @@ const Index = () => {
               size="lg"
               onClick={handleVote}
               disabled={submitting || !selectedImageId || !voterName.trim()}
-              className="min-w-[220px] rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-base font-bold h-13 px-10 shadow-[0_4px_25px_rgba(139,92,246,0.4)] hover:shadow-[0_6px_35px_rgba(139,92,246,0.5)] hover:scale-105 transition-all duration-300 disabled:opacity-40 disabled:hover:scale-100"
+              className="min-w-[220px] rounded-full bg-gradient-to-r from-[#00223B] to-sky-600 hover:from-[#003355] hover:to-sky-500 text-white text-base font-bold h-13 px-10 shadow-[0_4px_25px_rgba(14,165,233,0.4)] hover:shadow-[0_6px_35px_rgba(14,165,233,0.5)] hover:scale-105 transition-all duration-300 disabled:opacity-40 disabled:hover:scale-100"
             >
               {submitting ? (
                 <>

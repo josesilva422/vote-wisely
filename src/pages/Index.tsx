@@ -90,10 +90,10 @@ const Index = () => {
 
   if (voted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1a1145] via-[#2d1b69] to-[#0f172a] px-4 relative overflow-hidden">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#00223B] via-[#003355] to-[#0a1628] px-4 relative overflow-hidden">
         {/* Decorative glows */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/15 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-[128px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/15 rounded-full blur-[100px]" />
 
         <Card className="max-w-md w-full p-10 text-center space-y-5 bg-white/10 backdrop-blur-xl border-white/10 rounded-3xl shadow-2xl relative z-10">
           <div className="mx-auto w-20 h-20 rounded-full bg-emerald-500/20 flex items-center justify-center">

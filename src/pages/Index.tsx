@@ -199,7 +199,7 @@ const Index = () => {
                 <div className="p-3 text-center">
                   <p className="font-semibold text-sm text-white/90">{image.title}</p>
                   {selectedImageId === image.id && (
-                    <span className="inline-flex items-center gap-1 mt-1 text-xs text-purple-300 font-semibold">
+                    <span className="inline-flex items-center gap-1 mt-1 text-xs text-sky-300 font-semibold">
                       <CheckCircle2 className="h-3.5 w-3.5" /> Selecionada
                     </span>
                   )}

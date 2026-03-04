@@ -161,7 +161,7 @@ const Index = () => {
           </div>
         ) : images.length === 0 ? (
           <p className="text-center text-white/40 py-12">
-            Nenhuma imagem disponível para votação no momento.
+            Nenhuma imagem disponível para votação no momento
           </p>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

@@ -216,7 +216,7 @@ const Index = () => {
               size="lg"
               onClick={handleVote}
               disabled={submitting || !selectedImageId || !voterName.trim()}
-              className="min-w-[220px] rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-base font-bold h-13 px-10 shadow-[0_4px_25px_rgba(139,92,246,0.4)] hover:shadow-[0_6px_35px_rgba(139,92,246,0.5)] hover:scale-105 transition-all duration-300 disabled:opacity-40 disabled:hover:scale-100"
+              className="min-w-[220px] rounded-full bg-gradient-to-r from-[#00223B] to-sky-600 hover:from-[#003355] hover:to-sky-500 text-white text-base font-bold h-13 px-10 shadow-[0_4px_25px_rgba(14,165,233,0.4)] hover:shadow-[0_6px_35px_rgba(14,165,233,0.5)] hover:scale-105 transition-all duration-300 disabled:opacity-40 disabled:hover:scale-100"
             >
               {submitting ? (
                 <>

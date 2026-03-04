@@ -157,7 +157,7 @@ const Index = () => {
         {/* Gallery */}
         {loading ? (
           <div className="flex justify-center py-12">
-            <Loader2 className="h-8 w-8 animate-spin text-purple-400" />
+            <Loader2 className="h-8 w-8 animate-spin text-sky-400" />
           </div>
         ) : images.length === 0 ? (
           <p className="text-center text-white/40 py-12">

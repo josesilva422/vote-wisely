@@ -170,7 +170,7 @@ const Index = () => {
                 key={image.id}
                 className={`overflow-hidden cursor-pointer transition-all duration-300 bg-white/5 border-white/10 rounded-2xl backdrop-blur-sm group ${
                   selectedImageId === image.id
-                    ? "ring-2 ring-purple-400 shadow-[0_0_30px_rgba(168,85,247,0.3)] scale-[1.03]"
+                    ? "ring-2 ring-sky-400 shadow-[0_0_30px_rgba(56,189,248,0.3)] scale-[1.03]"
                     : "hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:border-white/20"
                 }`}
                 onClick={() => setSelectedImageId(image.id)}

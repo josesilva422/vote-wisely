@@ -204,6 +204,22 @@ const Index = () => {
             </Button>
           </div>
         )}
+
+        {/* Fullscreen Image Preview */}
+        <Dialog open={!!previewImage} onOpenChange={() => setPreviewImage(null)}>
+          <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 sm:p-4">
+            {previewImage && (
+              <div className="flex flex-col items-center gap-3">
+                <img
+                  src={previewImage.image_url}
+                  alt={previewImage.title}
+                  className="max-w-full max-h-[75vh] object-contain rounded-md"
+                />
+                <p className="text-lg font-semibold text-foreground">{previewImage.title}</p>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </main>
     </div>
   );

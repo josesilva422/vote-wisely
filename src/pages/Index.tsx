@@ -109,10 +109,10 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1145] via-[#2d1b69] to-[#0f172a] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#00223B] via-[#003355] to-[#0a1628] relative overflow-hidden">
       {/* Decorative background glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-500/15 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-sky-500/15 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Header */}
       <header className="relative py-10 md:py-14 px-4">
